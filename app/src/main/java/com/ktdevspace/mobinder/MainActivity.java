@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     ImageView cardImageView;
 
     SearchAPIService searchAPIService = new SearchAPIService(MainActivity.this);
+    RandomAPIService randomAPIService = new RandomAPIService(MainActivity.this);
 
 //    @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +33,55 @@ public class MainActivity extends AppCompatActivity {
         nameSearchData = (TextView) findViewById(R.id.searchTextView);
         cardImageView = (ImageView) findViewById(R.id.cardImageView);
 
+        randomCard();
+
+    }
+
+    public void randomCard() {
+        //Get random card and add to add at load
+        randomAPIService.getRandomCardName(new SearchAPIService.VolleyResponseListener() {
+            @Override
+            public void onError(String message) {
+
+                Toast.makeText(MainActivity.this, "Something broke!", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onResponse(String cardNameRandom) {
+
+                cardNameTextView.setText(cardNameRandom);
+            }
+        });
+
+        //Get card id and add to text view
+        randomAPIService.getRandomCardID(new SearchAPIService.VolleyResponseListener() {
+            @Override
+            public void onError(String message) {
+
+                Toast.makeText(MainActivity.this, "Something broke!", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onResponse(String cardIDRandom) {
+
+                cardIDTextView.setText("Multiverse ID: " + cardIDRandom);
+            }
+        });
+
+        //Get card image url and add to imageview
+        randomAPIService.getRandomCardImage(new SearchAPIService.VolleyResponseListener() {
+            @Override
+            public void onError(String message) {
+
+                Toast.makeText(MainActivity.this, "Something broke!", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onResponse(String cardImgURLRandom) {
+
+                Picasso.get().load(cardImgURLRandom).into(cardImageView);
+            }
+        });
     }
 
     //Search Btn
@@ -62,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(String cardID) {
 
-                cardIDTextView.setText("Card ID: " + cardID);
+                cardIDTextView.setText("Multiverse ID: " + cardID);
             }
         });
 

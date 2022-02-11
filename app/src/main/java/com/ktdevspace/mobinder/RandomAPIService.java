@@ -12,16 +12,16 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class SearchAPIService {
-//    public static final String QUERY_FOR_CARD_NAME_EXACT = "https://api.scryfall.com/cards/named?exact=";
+public class RandomAPIService {
+    public static final String QUERY_FOR_RANDOM_CARD = "https://api.scryfall.com/cards/random";
     public static final String QUERY_FOR_CARD_NAME_FUZZY = "https://api.scryfall.com/cards/named?fuzzy=";
 
     Context context;
-    String cardID;
-    String cardInfoName;
-    String cardImgURL;
+    String cardNameRandom;
+    String cardIDRandom;
+    String cardImgURLRandom;
 
-    public SearchAPIService(Context context) {
+    public RandomAPIService(Context context) {
         this.context = context;
     }
 
@@ -31,26 +31,24 @@ public class SearchAPIService {
         void onResponse(String cardID);
     }
 
-    //Get card name from a fuzzy(partial) name search, will also search full names
-    public void getCardName(String cardName, VolleyResponseListener volleyResponseListener){
-
-        String cardExactNameURL = QUERY_FOR_CARD_NAME_FUZZY + cardName;
+    //Get random card name from a fuzzy(partial) name search, will also search full names
+    public void getRandomCardName(SearchAPIService.VolleyResponseListener volleyResponseListener){
 
         JsonObjectRequest request = new JsonObjectRequest
-                (Request.Method.GET, cardExactNameURL, null, new Response.Listener<JSONObject>() {
+                (Request.Method.GET, QUERY_FOR_RANDOM_CARD, null, new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
-                        cardInfoName ="";
+                        RandomAPIService.this.cardNameRandom ="";
                         try {
                             //will get card name
-                            cardInfoName = response.getString("name");
+                            cardNameRandom = response.getString("name");
 
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
 
-//                        Toast.makeText(context,"Card Name: " + cardInfoName.toString(), Toast.LENGTH_SHORT).show();
-                        volleyResponseListener.onResponse(cardInfoName);
+//                        Toast.makeText(context,"Random Card: " + cardInfoRandom.toString(), Toast.LENGTH_SHORT).show();
+                        volleyResponseListener.onResponse(RandomAPIService.this.cardNameRandom);
                     }
                 }, new Response.ErrorListener() {
                     @Override
@@ -60,30 +58,27 @@ public class SearchAPIService {
                     }
                 });
         MySingleton.getInstance(context).addToRequestQueue(request);
-
     }
 
-    //Get card id from a fuzzy(partial) name search, will also search full names
-    public void getCardID(String cardName, VolleyResponseListener volleyResponseListener){
-
-        String cardExactNameURL = QUERY_FOR_CARD_NAME_FUZZY + cardName;
+    //Get random card id from a fuzzy(partial) name search, will also search full names
+    public void getRandomCardID(SearchAPIService.VolleyResponseListener volleyResponseListener){
 
         JsonObjectRequest request = new JsonObjectRequest
-                (Request.Method.GET, cardExactNameURL, null, new Response.Listener<JSONObject>() {
+                (Request.Method.GET, QUERY_FOR_RANDOM_CARD, null, new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
-                        cardID ="";
+                        cardIDRandom ="";
                         try {
                             //Will get card id
                             JSONArray cardIDInfo = response.getJSONArray("multiverse_ids");
-                            cardID = cardIDInfo.getString(0) ;
+                            cardIDRandom = cardIDInfo.getString(0) ;
 
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
 
 //                        Toast.makeText(context,"Card ID: " + cardID.toString(), Toast.LENGTH_SHORT).show();
-                        volleyResponseListener.onResponse(cardID);
+                        volleyResponseListener.onResponse(cardIDRandom);
                     }
                 }, new Response.ErrorListener() {
                     @Override
@@ -96,27 +91,25 @@ public class SearchAPIService {
 
     }
 
-    //Get card image from a fuzzy(partial) name search, will also search full names
-    public void getCardImage(String cardName, VolleyResponseListener volleyResponseListener){
-
-        String cardExactNameURL = QUERY_FOR_CARD_NAME_FUZZY + cardName;
+    //Get random card image from a fuzzy(partial) name search, will also search full names
+    public void getRandomCardImage(SearchAPIService.VolleyResponseListener volleyResponseListener){
 
         JsonObjectRequest request = new JsonObjectRequest
-                (Request.Method.GET, cardExactNameURL, null, new Response.Listener<JSONObject>() {
+                (Request.Method.GET, QUERY_FOR_RANDOM_CARD, null, new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
-                        cardImgURL ="";
+                        cardImgURLRandom ="";
                         try {
                             //Will get image url
                             JSONObject cardImgInfo = response.getJSONObject("image_uris");
-                            cardImgURL = cardImgInfo.getString("normal");
+                            cardImgURLRandom = cardImgInfo.getString("normal");
 
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
 
 //                        Toast.makeText(context,"Card Image URL: " + cardImgURL.toString(), Toast.LENGTH_SHORT).show();
-                        volleyResponseListener.onResponse(cardImgURL);
+                        volleyResponseListener.onResponse(cardImgURLRandom);
                     }
                 }, new Response.ErrorListener() {
                     @Override
