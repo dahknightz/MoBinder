@@ -8,18 +8,14 @@ import android.view.Window;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Button;
+import android.content.Intent;
 
 import com.squareup.picasso.Picasso;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView cardNameTextView;
-    TextView cardIDTextView;
-    TextView nameSearchData;
-    ImageView cardImageView;
-
-    SearchAPIService searchAPIService = new SearchAPIService(MainActivity.this);
-    RandomAPIService randomAPIService = new RandomAPIService(MainActivity.this);
+    public Button findCardButton;
 
 //    @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,106 +24,13 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().hide();
         setContentView(R.layout.activity_main);
 
-        cardNameTextView = (TextView) findViewById(R.id.cardNameTextView);
-        cardIDTextView = (TextView) findViewById(R.id.cardIDTextView);
-        nameSearchData = (TextView) findViewById(R.id.searchTextView);
-        cardImageView = (ImageView) findViewById(R.id.cardImageView);
+        findCardButton = (Button) findViewById(R.id.findCardBtn);
 
-        randomCard();
-
-    }
-
-    public void randomCard() {
-        //Get random card and add to add at load
-        randomAPIService.getRandomCardName(new SearchAPIService.VolleyResponseListener() {
+        findCardButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onError(String message) {
-
-                Toast.makeText(MainActivity.this, "Something broke!", Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onResponse(String cardNameRandom) {
-
-                cardNameTextView.setText(cardNameRandom);
-            }
-        });
-
-        //Get card id and add to text view
-        randomAPIService.getRandomCardID(new SearchAPIService.VolleyResponseListener() {
-            @Override
-            public void onError(String message) {
-
-                Toast.makeText(MainActivity.this, "Something broke!", Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onResponse(String cardIDRandom) {
-
-                cardIDTextView.setText("Multiverse ID: " + cardIDRandom);
-            }
-        });
-
-        //Get card image url and add to imageview
-        randomAPIService.getRandomCardImage(new SearchAPIService.VolleyResponseListener() {
-            @Override
-            public void onError(String message) {
-
-                Toast.makeText(MainActivity.this, "Something broke!", Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onResponse(String cardImgURLRandom) {
-
-                Picasso.get().load(cardImgURLRandom).into(cardImageView);
-            }
-        });
-    }
-
-    //Search Btn
-    public void searchCard(View view) {
-        //Get card name and add to textview
-        searchAPIService.getCardName(nameSearchData.getText().toString(), new SearchAPIService.VolleyResponseListener() {
-            @Override
-            public void onError(String message) {
-
-                Toast.makeText(MainActivity.this, "Something broke!", Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onResponse(String cardName) {
-
-                cardNameTextView.setText("Card Name: " + cardName);
-            }
-        });
-
-        //Get card id and add to text view
-        searchAPIService.getCardID(nameSearchData.getText().toString(), new SearchAPIService.VolleyResponseListener() {
-            @Override
-            public void onError(String message) {
-
-                Toast.makeText(MainActivity.this, "Something broke!", Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onResponse(String cardID) {
-
-                cardIDTextView.setText("Multiverse ID: " + cardID);
-            }
-        });
-
-        //Get card image url and add to imageview
-        searchAPIService.getCardImage(nameSearchData.getText().toString(), new SearchAPIService.VolleyResponseListener() {
-            @Override
-            public void onError(String message) {
-
-                Toast.makeText(MainActivity.this, "Something broke!", Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onResponse(String cardImgURL) {
-
-                Picasso.get().load(cardImgURL).into(cardImageView);
+            public void onClick(View view) {
+                Intent findCardIntent = new Intent(MainActivity.this, CardViewer.class);
+                startActivity(findCardIntent);
             }
         });
     }
