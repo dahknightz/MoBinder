@@ -30,7 +30,7 @@
             android:layout_margin="25dp"
             android:background="@drawable/roundbuttonstyle"
             android:text="Game Assist"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textStyle="bold|italic" />
 
         <Button
@@ -40,7 +40,7 @@
             android:layout_margin="25dp"
             android:background="@drawable/roundbuttonstyle"
             android:text="Find Card"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textStyle="bold|italic" />
 
         <Button
@@ -50,7 +50,7 @@
             android:layout_margin="25dp"
             android:background="@drawable/roundbuttonstyle"
             android:text="My Collection"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textStyle="bold|italic" />
 
         <Button
@@ -60,7 +60,7 @@
             android:layout_margin="25dp"
             android:background="@drawable/roundbuttonstyle"
             android:text="My Decks"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textStyle="bold|italic" />
     </LinearLayout>
 </ScrollView>
