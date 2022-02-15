@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MoBinder">
         <activity
+            android:name=".FourPlayerCounter"
+            android:exported="false" />
+        <activity
+            android:name=".TwoPlayerCounter"
+            android:exported="false" />
+        <activity
+            android:name=".GameAssist"
+            android:exported="false" />
+        <activity
             android:name=".CardViewer"
             android:exported="false" />
         <activity

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blacktexturebackground"
+    android:columnCount="3"
+    android:fitsSystemWindows="true"
+    android:rowCount="6"
+    tools:context=".FourPlayerCounter">
+
+    <Button
+        android:id="@+id/fourPlayerOneDownBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:background="#00C308"
+        android:backgroundTint="#00C308"
+        android:text="-" />
+
+    <Button
+        android:id="@+id/endFourGameBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_rowSpan="6"
+        android:layout_rowWeight="1"
+        android:layout_columnSpan="1"
+        android:layout_columnWeight="0"
+        android:background="@drawable/roundbuttonstyle"
+        android:text="End Game" />
+
+    <Button
+        android:id="@+id/playerFourUpBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:text="+" />
+
+    <TextView
+        android:id="@+id/fourPlayerOneTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:background="#00C308"
+        android:backgroundTint="#00C308"
+        android:text="20" />
+
+    <TextView
+        android:id="@+id/playerFourTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:text="20" />
+
+    <Button
+        android:id="@+id/fourPlayerOneUpBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:background="#00C308"
+        android:backgroundTint="#00C308"
+        android:text="+" />
+
+    <Button
+        android:id="@+id/playerFourDownBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:text="-" />
+
+    <Button
+        android:id="@+id/fourPlayerTwoDownBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:text="-" />
+
+    <Button
+        android:id="@+id/playerThreeUpBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:text="+" />
+
+    <TextView
+        android:id="@+id/fourPlayerTwoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:text="20" />
+
+    <TextView
+        android:id="@+id/playerThreeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:text="20" />
+
+    <Button
+        android:id="@+id/fourPlayerTwoUpBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:text="+" />
+
+    <Button
+        android:id="@+id/playerThreeDownBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:text="-" />
+</GridLayout>

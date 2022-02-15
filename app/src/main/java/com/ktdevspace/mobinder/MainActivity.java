@@ -27,8 +27,6 @@ public class MainActivity extends AppCompatActivity {
 //    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getSupportActionBar().hide();
         setContentView(R.layout.activity_main);
 
         findCardButton = (Button) findViewById(R.id.findCardBtn);
@@ -49,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                     findCardButton.startAnimation(decreaseScale);
                 }
                 findCardButton.setEnabled(false);
-                myHandler.postDelayed(findCardBtnDelay, 500);
+                myHandler.postDelayed(findCardBtnDelay, 300);
                 return true;
             }
         });
@@ -63,6 +61,8 @@ public class MainActivity extends AppCompatActivity {
                 }else if(motionEvent.getAction()== MotionEvent.ACTION_UP){
                     gameAssistButton.startAnimation(decreaseScale);
                 }
+                gameAssistButton.setEnabled(false);
+                myHandler.postDelayed(gameAssistBtnDelay, 300);
                 return true;
             }
         });
@@ -76,6 +76,8 @@ public class MainActivity extends AppCompatActivity {
                 }else if(motionEvent.getAction()== MotionEvent.ACTION_UP){
                     myCollectionButton.startAnimation(decreaseScale);
                 }
+                myCollectionButton.setEnabled(false);
+                myHandler.postDelayed(myCollectionsBtnDelay, 300);
                 return true;
             }
         });
@@ -89,6 +91,8 @@ public class MainActivity extends AppCompatActivity {
                 }else if(motionEvent.getAction()== MotionEvent.ACTION_UP){
                     myDecksButton.startAnimation(decreaseScale);
                 }
+                myDecksButton.setEnabled(false);
+                myHandler.postDelayed(myDecksBtnDelay, 300);
                 return true;
             }
         });
@@ -97,6 +101,24 @@ public class MainActivity extends AppCompatActivity {
         public void run() {
             Intent viewCardIntent = new Intent(MainActivity.this, CardViewer.class);
             startActivity(viewCardIntent);
+        }
+    };
+    private Runnable gameAssistBtnDelay = new Runnable() {
+        public void run() {
+            Intent gameAssistIntent = new Intent(MainActivity.this, GameAssist.class);
+            startActivity(gameAssistIntent);
+        }
+    };
+    private Runnable myCollectionsBtnDelay = new Runnable() {
+        public void run() {
+            Intent myCollectionsIntent = new Intent(MainActivity.this, GameAssist.class);
+            startActivity(myCollectionsIntent);
+        }
+    };
+    private Runnable myDecksBtnDelay = new Runnable() {
+        public void run() {
+            Intent myDecksIntent = new Intent(MainActivity.this, GameAssist.class);
+            startActivity(myDecksIntent);
         }
     };
 }
