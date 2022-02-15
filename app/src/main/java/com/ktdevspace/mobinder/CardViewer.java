@@ -4,13 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.Window;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -22,7 +23,7 @@ public class CardViewer extends AppCompatActivity {
 
     public TextView cardNameTextView, cardIDTextView, nameSearchData;
     public ImageView cardImageView;
-    public Button backButton,findButton, addCollectionButton, buyButton;
+    public Button cardViewBackButton,findButton, addCollectionButton, buyButton;
     Animation increaseScale, decreaseScale;
 
     private Handler myHandler = new Handler();
@@ -34,15 +35,13 @@ public class CardViewer extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getSupportActionBar().hide();
         setContentView(R.layout.activity_card_viewer);
 
         cardNameTextView = (TextView) findViewById(R.id.cardNameTextView);
         cardIDTextView = (TextView) findViewById(R.id.cardIDTextView);
         nameSearchData = (TextView) findViewById(R.id.searchTextView);
         cardImageView = (ImageView) findViewById(R.id.cardImageView);
-        backButton = (Button) findViewById(R.id.viewCardBackBtn);
+        cardViewBackButton = (Button) findViewById(R.id.cardViewBackBtn);
         findButton = (Button) findViewById(R.id.searchBtn);
 
         increaseScale = AnimationUtils.loadAnimation(this,R.anim.increase_scale);
@@ -51,17 +50,17 @@ public class CardViewer extends AppCompatActivity {
         randomCard();
 
         //Back button
-        backButton.setOnTouchListener(new View.OnTouchListener() {
+        cardViewBackButton.setOnTouchListener(new View.OnTouchListener() {
             @SuppressLint("ClickableViewAccessibility")
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 if(motionEvent.getAction()== MotionEvent.ACTION_DOWN){
-                    backButton.startAnimation(increaseScale);
+                    cardViewBackButton.startAnimation(increaseScale);
                 }else if(motionEvent.getAction()== MotionEvent.ACTION_UP){
-                    backButton.startAnimation(decreaseScale);
+                    cardViewBackButton.startAnimation(decreaseScale);
                 }
-                backButton.setEnabled(false);
-                myHandler.postDelayed(backBtnDelay, 100);
+                cardViewBackButton.setEnabled(false);
+                myHandler.postDelayed(cardViewBackBtnDelay, 100);
                 return true;
             }
         });
@@ -76,6 +75,7 @@ public class CardViewer extends AppCompatActivity {
                 }else if(motionEvent.getAction()== MotionEvent.ACTION_UP){
                     findButton.startAnimation(decreaseScale);
                 }
+                nameSearchData.onEditorAction(EditorInfo.IME_ACTION_DONE);
                 myHandler.postDelayed(findBtnDelay, 100);
                 return true;
             }
@@ -130,7 +130,7 @@ public class CardViewer extends AppCompatActivity {
     }
 
     //Back Btn delay runnable
-    private Runnable backBtnDelay = new Runnable() {
+    private Runnable cardViewBackBtnDelay = new Runnable() {
         public void run() {
             Intent mainPageIntent = new Intent(CardViewer.this, MainActivity.class);
             startActivity(mainPageIntent);

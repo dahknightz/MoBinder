@@ -3,8 +3,8 @@
 
     <item>
         <bitmap
-            android:gravity="fill"
-            android:src="@drawable/mtgtable" />
+            android:scaleType="centerCrop"
+            android:src="@drawable/nicolbolas" />
     </item>
 
 </layer-list>

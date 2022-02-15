@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blacktexturebackground"
+    android:columnCount="3"
+    android:fitsSystemWindows="true"
+    android:rowCount="3"
+    tools:context=".TwoPlayerCounter">
+
+    <Button
+        android:id="@+id/playerTwoUpBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:background="#00C308"
+        android:backgroundTint="#00C308"
+        android:text="+"
+        android:textSize="30sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/playerTwoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:background="#00C308"
+        android:backgroundTint="#00C308"
+        android:gravity="center"
+        android:rotation="180"
+        android:text="20"
+        android:textColor="#000000"
+        android:textSize="80sp"
+        android:textStyle="bold|italic" />
+
+    <Button
+        android:id="@+id/playerTwoDownBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:background="#00C308"
+        android:backgroundTint="#00C308"
+        android:text="-"
+        android:textSize="30sp"
+        android:textStyle="bold|italic" />
+
+    <Button
+        android:id="@+id/endGameBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_rowWeight="0"
+        android:layout_columnSpan="3"
+        android:layout_columnWeight="1"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:background="@drawable/roundbuttonstyle"
+        android:text="End Game"
+        android:textSize="15sp"
+        android:textStyle="bold|italic" />
+
+    <Button
+        android:id="@+id/playerOneDownBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:background="#00B6CD"
+        android:backgroundTint="#00B6CD"
+        android:text="-"
+        android:textSize="30sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/playerOneTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:background="#00B6CD"
+        android:backgroundTint="#00B6CD"
+        android:gravity="center"
+        android:text="20"
+        android:textColor="#000000"
+        android:textSize="80sp"
+        android:textStyle="bold|italic" />
+
+    <Button
+        android:id="@+id/playerOneUpBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:background="#00B6CD"
+        android:backgroundTint="#00B6CD"
+        android:text="+"
+        android:textSize="30sp"
+        android:textStyle="bold|italic" />
+</GridLayout>

@@ -4,20 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#434343"
+    android:background="@drawable/plainsbackground"
+    android:fitsSystemWindows="true"
     android:orientation="vertical"
     tools:context=".CardViewer">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/celisland"
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/viewCardBackBtn"
+            android:id="@+id/cardViewBackBtn"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
             android:background="@drawable/roundbuttonstyle"
             android:text="Back"
             android:textSize="15sp"
@@ -30,7 +31,7 @@
 
             <EditText
                 android:id="@+id/searchTextView"
-                android:layout_width="300dp"
+                android:layout_width="250dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="1dp"
@@ -46,10 +47,11 @@
                 android:id="@+id/searchBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
                 android:background="@drawable/roundbuttonstyle"
                 android:text="Find"
-                android:textSize="15sp"
+                android:textSize="12sp"
                 android:textStyle="bold|italic"
                 tools:ignore="TouchTargetSizeCheck" />
         </LinearLayout>
@@ -70,24 +72,24 @@
 
             <Button
                 android:id="@+id/addCardBtn"
-                android:layout_width="100dp"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/roundbuttonstyle"
                 android:text="Add to collection"
-                android:textSize="15sp"
+                android:textSize="12sp"
                 android:textStyle="bold|italic" />
 
             <Button
                 android:id="@+id/cardPriceBtn"
-                android:layout_width="100dp"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/roundbuttonstyle"
                 android:text="Buy Card"
-                android:textSize="15sp"
+                android:textSize="12sp"
                 android:textStyle="bold|italic" />
 
         </LinearLayout>

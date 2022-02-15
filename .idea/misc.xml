@@ -4,10 +4,20 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Personal Code Projects/MoBinder/app/src/main/res/drawable/backgroundimage.xml" value="0.191" />
+        <entry key="..\:/Personal Code Projects/MoBinder/app/src/main/res/drawable/blacktexturebackground.xml" value="0.1" />
+        <entry key="..\:/Personal Code Projects/MoBinder/app/src/main/res/drawable/forestbackground.xml" value="0.2005" />
+        <entry key="..\:/Personal Code Projects/MoBinder/app/src/main/res/drawable/islandbackground.xml" value="0.212" />
         <entry key="..\:/Personal Code Projects/MoBinder/app/src/main/res/drawable/mainbackgroundimage.xml" value="0.191" />
+        <entry key="..\:/Personal Code Projects/MoBinder/app/src/main/res/drawable/mountainbackground.xml" value="0.212" />
+        <entry key="..\:/Personal Code Projects/MoBinder/app/src/main/res/drawable/nicolbolasbackground.xml" value="0.1" />
+        <entry key="..\:/Personal Code Projects/MoBinder/app/src/main/res/drawable/plainsbackground.xml" value="0.212" />
         <entry key="..\:/Personal Code Projects/MoBinder/app/src/main/res/drawable/roundbuttonstyle.xml" value="0.4985" />
-        <entry key="..\:/Personal Code Projects/MoBinder/app/src/main/res/layout/activity_card_viewer.xml" value="0.5541666666666667" />
+        <entry key="..\:/Personal Code Projects/MoBinder/app/src/main/res/drawable/swampbackground.xml" value="0.1" />
+        <entry key="..\:/Personal Code Projects/MoBinder/app/src/main/res/layout/activity_card_viewer.xml" value="0.33" />
+        <entry key="..\:/Personal Code Projects/MoBinder/app/src/main/res/layout/activity_four_player_counter.xml" value="0.33" />
+        <entry key="..\:/Personal Code Projects/MoBinder/app/src/main/res/layout/activity_game_assist.xml" value="0.33" />
         <entry key="..\:/Personal Code Projects/MoBinder/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Personal Code Projects/MoBinder/app/src/main/res/layout/activity_two_player_counter.xml" value="0.33" />
         <entry key="..\:/Personal Code Projects/MoBinder/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.191" />
       </map>
     </option>
