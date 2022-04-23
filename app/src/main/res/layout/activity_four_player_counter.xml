@@ -18,7 +18,11 @@
         android:layout_columnWeight="1"
         android:background="#00C308"
         android:backgroundTint="#00C308"
-        android:text="-" />
+        android:text="@string/minusBtn"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
     <Button
         android:id="@+id/endFourGameBtn"
@@ -29,15 +33,22 @@
         android:layout_columnSpan="1"
         android:layout_columnWeight="0"
         android:background="@drawable/roundbuttonstyle"
-        android:text="End Game" />
+        android:text="@string/end_game_btn"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:textStyle="bold|italic" />
 
     <Button
-        android:id="@+id/playerFourUpBtn"
+        android:id="@+id/playerFourDownBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
-        android:text="+" />
+        android:background="#00B6CD"
+        android:text="@string/minusBtn"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/fourPlayerOneTextView"
@@ -47,7 +58,12 @@
         android:layout_columnWeight="1"
         android:background="#00C308"
         android:backgroundTint="#00C308"
-        android:text="20" />
+        android:gravity="center|center_horizontal"
+        android:rotation="180"
+        android:text="@string/startingLife"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        android:textStyle="bold|italic" />
 
     <TextView
         android:id="@+id/playerFourTextView"
@@ -55,7 +71,13 @@
         android:layout_height="wrap_content"
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
-        android:text="20" />
+        android:background="#00B6CD"
+        android:gravity="center"
+        android:rotation="180"
+        android:text="@string/startingLife"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        android:textStyle="bold|italic" />
 
     <Button
         android:id="@+id/fourPlayerOneUpBtn"
@@ -65,47 +87,22 @@
         android:layout_columnWeight="1"
         android:background="#00C308"
         android:backgroundTint="#00C308"
-        android:text="+" />
+        android:text="@string/plusBtn"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
     <Button
-        android:id="@+id/playerFourDownBtn"
+        android:id="@+id/playerFourUpBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
-        android:text="-" />
-
-    <Button
-        android:id="@+id/fourPlayerTwoDownBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_rowWeight="1"
-        android:layout_columnWeight="1"
-        android:text="-" />
-
-    <Button
-        android:id="@+id/playerThreeUpBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_rowWeight="1"
-        android:layout_columnWeight="1"
-        android:text="+" />
-
-    <TextView
-        android:id="@+id/fourPlayerTwoTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_rowWeight="1"
-        android:layout_columnWeight="1"
-        android:text="20" />
-
-    <TextView
-        android:id="@+id/playerThreeTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_rowWeight="1"
-        android:layout_columnWeight="1"
-        android:text="20" />
+        android:background="#00B6CD"
+        android:text="@string/plusBtn"
+        android:textColor="#000000"
+        android:textSize="40sp" />
 
     <Button
         android:id="@+id/fourPlayerTwoUpBtn"
@@ -113,7 +110,61 @@
         android:layout_height="wrap_content"
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
-        android:text="+" />
+        android:background="#E33D3D"
+        android:text="@string/plusBtn"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/playerThreeUpBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:background="#6A3FB8"
+        android:text="@string/plusBtn"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/fourPlayerTwoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:background="#E33D3D"
+        android:gravity="center"
+        android:text="@string/startingLife"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/playerThreeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:background="#6A3FB8"
+        android:gravity="center"
+        android:text="@string/startingLife"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        android:textStyle="bold|italic" />
+
+    <Button
+        android:id="@+id/fourPlayerTwoDownBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:background="#E33D3D"
+        android:text="@string/minusBtn"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/playerThreeDownBtn"
@@ -121,5 +172,9 @@
         android:layout_height="wrap_content"
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
-        android:text="-" />
+        android:background="#6A3FB8"
+        android:text="@string/minusBtn"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        android:textStyle="bold" />
 </GridLayout>
