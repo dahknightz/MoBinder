@@ -22,9 +22,10 @@ public class MainActivity extends AppCompatActivity {
 
     public Button findCardButton, gameAssistButton, myCollectionButton, myDecksButton;
     Animation increaseScale, decreaseScale;
-    private Handler myHandler = new Handler();
+    private final Handler myHandler = new Handler();
 
 //    @Override
+    @SuppressLint("ClickableViewAccessibility")
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -97,25 +98,25 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    private Runnable findCardBtnDelay = new Runnable() {
+    private final Runnable findCardBtnDelay = new Runnable() {
         public void run() {
             Intent viewCardIntent = new Intent(MainActivity.this, CardViewer.class);
             startActivity(viewCardIntent);
         }
     };
-    private Runnable gameAssistBtnDelay = new Runnable() {
+    private final Runnable gameAssistBtnDelay = new Runnable() {
         public void run() {
             Intent gameAssistIntent = new Intent(MainActivity.this, GameAssist.class);
             startActivity(gameAssistIntent);
         }
     };
-    private Runnable myCollectionsBtnDelay = new Runnable() {
+    private final Runnable myCollectionsBtnDelay = new Runnable() {
         public void run() {
             Intent myCollectionsIntent = new Intent(MainActivity.this, GameAssist.class);
             startActivity(myCollectionsIntent);
         }
     };
-    private Runnable myDecksBtnDelay = new Runnable() {
+    private final Runnable myDecksBtnDelay = new Runnable() {
         public void run() {
             Intent myDecksIntent = new Intent(MainActivity.this, GameAssist.class);
             startActivity(myDecksIntent);

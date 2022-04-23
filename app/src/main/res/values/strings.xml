@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">MoBinder</string>
+    <string name="game_assist_btn_text">Game Assist</string>
+    <string name="find_card_btn_text">Find Card</string>
+    <string name="my_collection_btn_text">My Collection</string>
+    <string name="my_decks_btn_text">My Decks</string>
+    <string name="mobinder_logo_btn_text">MoBinder Logo</string>
+    <string name="plusBtn">+</string>
+    <string name="startingLife">20</string>
+    <string name="minusBtn">-</string>
+    <string name="end_game_btn">End Game</string>
+    <string name="backBtnText">Back</string>
+    <string name="two_players_btn_text">Two Players</string>
+    <string name="four_players_btn_Text">Four Players</string>
+    <string name="findBtn">Find</string>
+    <string name="buy_cardbtn">Buy Card</string>
+    <string name="add_to_collectionbtn">Add to collection</string>
+    <string name="search_cards_hint">Search Cards</string>
+    <string name="card_image_view">Card Image View</string>
 </resources>

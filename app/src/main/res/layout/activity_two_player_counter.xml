@@ -18,9 +18,10 @@
         android:layout_columnWeight="1"
         android:background="#00C308"
         android:backgroundTint="#00C308"
-        android:text="+"
+        android:text="@string/plusBtn"
         android:textSize="30sp"
-        android:textStyle="bold|italic" />
+        android:textStyle="bold|italic"
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
     <TextView
         android:id="@+id/playerTwoTextView"
@@ -32,7 +33,7 @@
         android:backgroundTint="#00C308"
         android:gravity="center"
         android:rotation="180"
-        android:text="20"
+        android:text="@string/startingLife"
         android:textColor="#000000"
         android:textSize="80sp"
         android:textStyle="bold|italic" />
@@ -45,9 +46,10 @@
         android:layout_columnWeight="1"
         android:background="#00C308"
         android:backgroundTint="#00C308"
-        android:text="-"
+        android:text="@string/minusBtn"
         android:textSize="30sp"
-        android:textStyle="bold|italic" />
+        android:textStyle="bold|italic"
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
     <Button
         android:id="@+id/endGameBtn"
@@ -59,7 +61,7 @@
         android:layout_marginLeft="100dp"
         android:layout_marginRight="100dp"
         android:background="@drawable/roundbuttonstyle"
-        android:text="End Game"
+        android:text="@string/end_game_btn"
         android:textSize="15sp"
         android:textStyle="bold|italic" />
 
@@ -71,7 +73,7 @@
         android:layout_columnWeight="1"
         android:background="#00B6CD"
         android:backgroundTint="#00B6CD"
-        android:text="-"
+        android:text="@string/minusBtn"
         android:textSize="30sp"
         android:textStyle="bold|italic" />
 
@@ -84,7 +86,7 @@
         android:background="#00B6CD"
         android:backgroundTint="#00B6CD"
         android:gravity="center"
-        android:text="20"
+        android:text="@string/startingLife"
         android:textColor="#000000"
         android:textSize="80sp"
         android:textStyle="bold|italic" />
@@ -97,7 +99,7 @@
         android:layout_columnWeight="1"
         android:background="#00B6CD"
         android:backgroundTint="#00B6CD"
-        android:text="+"
+        android:text="@string/plusBtn"
         android:textSize="30sp"
         android:textStyle="bold|italic" />
 </GridLayout>

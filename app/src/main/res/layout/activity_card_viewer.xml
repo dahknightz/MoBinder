@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardViewScrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/plainsbackground"
@@ -20,7 +21,7 @@
             android:layout_height="40dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/roundbuttonstyle"
-            android:text="Back"
+            android:text="@string/backBtnText"
             android:textSize="15sp"
             android:textStyle="bold|italic" />
 
@@ -39,9 +40,10 @@
                 android:autofillHints=""
                 android:background="@color/white"
                 android:ems="10"
+                android:hint="@string/search_cards_hint"
                 android:inputType="textPersonName"
                 android:minHeight="36dp"
-                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,TextContrastCheck" />
 
             <Button
                 android:id="@+id/searchBtn"
@@ -50,7 +52,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
                 android:background="@drawable/roundbuttonstyle"
-                android:text="Find"
+                android:text="@string/findBtn"
                 android:textSize="12sp"
                 android:textStyle="bold|italic"
                 tools:ignore="TouchTargetSizeCheck" />
@@ -62,7 +64,9 @@
             android:layout_height="400dp"
             android:layout_marginTop="25dp"
             android:layout_marginBottom="25dp"
-            android:backgroundTint="#434343" />
+            android:backgroundTint="#434343"
+            android:contentDescription="@string/card_image_view"
+            tools:ignore="ImageContrastCheck" />
 
 
         <LinearLayout
@@ -72,23 +76,27 @@
 
             <Button
                 android:id="@+id/addCardBtn"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/roundbuttonstyle"
-                android:text="Add to collection"
+                android:text="@string/add_to_collectionbtn"
+                android:textColor="#000000"
                 android:textSize="12sp"
                 android:textStyle="bold|italic" />
 
             <Button
                 android:id="@+id/cardPriceBtn"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/roundbuttonstyle"
-                android:text="Buy Card"
+                android:text="@string/buy_cardbtn"
+                android:textColor="#000000"
                 android:textSize="12sp"
                 android:textStyle="bold|italic" />
 
@@ -111,7 +119,7 @@
                 android:layout_columnSpan="2"
                 android:layout_columnWeight="1"
                 android:layout_gravity="center"
-                android:textColor="@color/white"
+                android:textColor="#FFEB3B"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -122,7 +130,7 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_gravity="center"
-                android:textColor="@color/white"
+                android:textColor="#FFEB3B"
                 android:textSize="15sp"
                 android:textStyle="bold" />
 
@@ -133,8 +141,7 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_gravity="center"
-                android:text="Rarity"
-                android:textColor="@color/white"
+                android:textColor="#FFEB3B"
                 android:textSize="15sp"
                 android:textStyle="bold" />
 
@@ -146,8 +153,7 @@
                 android:layout_columnSpan="2"
                 android:layout_columnWeight="1"
                 android:layout_gravity="center"
-                android:text="card set name"
-                android:textColor="@color/white"
+                android:textColor="#FFEB3B"
                 android:textSize="15sp"
                 android:textStyle="bold" />
 
@@ -158,8 +164,7 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_gravity="center"
-                android:text="CMC"
-                android:textColor="@color/white"
+                android:textColor="#FFEB3B"
                 android:textSize="15sp"
                 android:textStyle="bold" />
 
@@ -170,8 +175,7 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_gravity="center"
-                android:text="Colors"
-                android:textColor="@color/white"
+                android:textColor="#FFEB3B"
                 android:textSize="15sp"
                 android:textStyle="bold" />
 
@@ -182,8 +186,7 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_gravity="center"
-                android:text="Card Price"
-                android:textColor="@color/white"
+                android:textColor="#FFEB3B"
                 android:textSize="15sp"
                 android:textStyle="bold" />
 
@@ -194,8 +197,7 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_gravity="center"
-                android:text="Card Foil Price"
-                android:textColor="@color/white"
+                android:textColor="#FFEB3B"
                 android:textSize="15sp"
                 android:textStyle="bold" />
 

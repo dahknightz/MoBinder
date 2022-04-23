@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:background="@drawable/roundbuttonstyle"
-        android:text="Back"
+        android:text="@string/backBtnText"
         android:textSize="15sp"
         android:textStyle="bold|italic" />
 
@@ -31,7 +31,7 @@
             android:layout_marginLeft="25dp"
             android:layout_marginRight="25dp"
             android:background="@drawable/roundbuttonstyle"
-            android:text="Two Players"
+            android:text="@string/two_players_btn_text"
             android:textSize="15sp"
             android:textStyle="bold|italic" />
 
@@ -43,7 +43,7 @@
             android:layout_marginTop="50dp"
             android:layout_marginRight="25dp"
             android:background="@drawable/roundbuttonstyle"
-            android:text="Four Players"
+            android:text="@string/four_players_btn_Text"
             android:textSize="15sp"
             android:textStyle="bold|italic" />
 

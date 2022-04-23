@@ -22,6 +22,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="60dp"
             android:layout_marginBottom="20dp"
+            android:contentDescription="@string/mobinder_logo_btn_text"
             app:srcCompat="@drawable/fullmobinderlogonb" />
 
         <Button
@@ -30,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="25dp"
             android:background="@drawable/roundbuttonstyle"
-            android:text="Game Assist"
+            android:text="@string/game_assist_btn_text"
             android:textSize="20sp"
             android:textStyle="bold|italic" />
 
@@ -40,9 +41,10 @@
             android:layout_height="wrap_content"
             android:layout_margin="25dp"
             android:background="@drawable/roundbuttonstyle"
-            android:text="Find Card"
+            android:text="@string/find_card_btn_text"
             android:textSize="20sp"
-            android:textStyle="bold|italic" />
+            android:textStyle="bold|italic"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <Button
             android:id="@+id/myCollectionBtn"
@@ -50,7 +52,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="25dp"
             android:background="@drawable/roundbuttonstyle"
-            android:text="My Collection"
+            android:text="@string/my_collection_btn_text"
             android:textSize="20sp"
             android:textStyle="bold|italic" />
 
@@ -60,7 +62,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="25dp"
             android:background="@drawable/roundbuttonstyle"
-            android:text="My Decks"
+            android:text="@string/my_decks_btn_text"
             android:textSize="20sp"
             android:textStyle="bold|italic" />
     </LinearLayout>
